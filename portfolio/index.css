@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2d2d2d 50%, #404040 75%, #525252 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 26, 0.8) 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.3"/><circle cx="80" cy="40" r="0.5" fill="white" opacity="0.5"/><circle cx="40" cy="80" r="0.8" fill="white" opacity="0.4"/><circle cx="90" cy="10" r="0.3" fill="white" opacity="0.6"/><circle cx="10" cy="90" r="0.7" fill="white" opacity="0.3"/></svg>');
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tag {
+    background: linear-gradient(135deg, #666666, #888888);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 2px 10px rgba(102, 102, 102, 0.3);
+}
+
+/* Estilo consistente para todos los botones */
+.button.is-link, .button.is-link.is-light {
+    background: linear-gradient(135deg, #666666, #888888);
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 102, 102, 0.4);
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.button.is-link:hover, .button.is-link.is-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 102, 102, 0.6);
+    background: linear-gradient(135deg, #777777, #999999);
+}
+
+.input, .textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.input:focus, .textarea:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #888888;
+    box-shadow: 0 0 0 0.125em rgba(136, 136, 136, 0.25);
+}
+
+.input::placeholder, .textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title, .subtitle {
+    color: #ffffff;
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.9);
+}
